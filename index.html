@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper Scissors </title>
+</head>
+<body>
+    <script>
+
+    // get computer choice 
+    function getComputerChoice(){
+
+        // generate a random number between 1 and 10
+        let randomNumber = Math.random()*10;
+
+        // Choose rock if the number less than 3.33
+        if (randomNumber < 3.33) {
+            return "rock" ;
+        }
+        // Choose paper if the number more than 6.66
+        else if (randomNumber > 6.66) {
+            return "paper" ;
+        }
+        // Choose scissor if its not both
+        else {
+            return "scissor" ;
+        }
+    }
+
+    // get player Choice 
+    function getPlayerChoice() {
+        let playerChoice = prompt("Choose Rock or Paper or Scissor");
+
+        while (!(playerChoice.toLowerCase() === "rock" || playerChoice.toLowerCase() === "paper" || playerChoice.toLowerCase() === "scissor" )) {
+            alert("you must choose either rock paper or scissor.")
+            playerChoice = prompt("Choose Rock or Paper or Scissor");
+        }
+        return playerChoice ;
+    }
+
+// take the input from the user 
+// 
+
+
+
+    // Make two variables to contain the score 
+    let player = 0 ;
+    let computer = 0;
+
+
+    // play a single round 
+    function singleRound(){
+
+        // assign the value of the functions to variables
+        let playerSelection = getPlayerChoice();
+        let computerSelection = getComputerChoice();
+
+        if (playerSelection === "rock") {
+            switch (computerSelection) {
+                case "rock": 
+                    return "Rock and Rock is a tie";
+                    break;
+
+                case "paper":
+                    computer += 1;
+                    return "You lose! Paper beats Rock";
+                    break;
+                
+                case "scissor": 
+                    player += 1;
+                    return "You win! Rock beats scissor"
+                    break;
+
+            }
+        }
+        else if (playerSelection === "paper") {
+            switch (computerSelection) {
+                case "rock": 
+                    player += 1;
+                    return "You win! Paper beats Rock";
+                    break;
+
+                case "paper":
+                    return "Paper and Paper is a tie";
+                    break;
+                
+                case "scissor": 
+                    computer += 1;
+                    return "You lose! Scissor beats Paper"
+                    break;
+            }
+        }
+        else if (playerSelection === "scissor") {
+            switch (computerSelection) {
+                case "rock": 
+                    computer += 1;
+                    return "You lose! Rock beats Scissor";
+                    break;
+
+                case "paper":
+                    player += 1;
+                    return "You win! Scissor beats Paper";
+                    break;
+                
+                case "scissor": 
+                    return "Scissor and Scissor is a tie"
+            }
+        }
+
+    }
+
+    // play a game of 5 
+    function game(){
+        for (let i = 0 ; i < 5 ; i++){
+            console.log(singleRound());
+        }
+        if (player > computer){
+            console.log("You are better than the machine your father should be proud.");
+        }
+        else if (player < computer) {
+            console.log("Fucking loser.");
+        }
+        else {
+            console.log("its a tie. are you a machine?");
+        }
+    }
+
+    game();
+    
+    
+    </script>
+</body>
+</html>
