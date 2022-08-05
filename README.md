@@ -1,1 +1,1 @@
-# Roch-paper-scissors-
+# Rock-paper-scissors-
