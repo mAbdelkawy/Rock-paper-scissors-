@@ -6,3 +6,26 @@ body {
     font-family: sans-serif;
     background-color: #E7E9EB;
 }
+.computer-hand {
+    text-align: center;
+
+}
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.choice {
+    text-align: center;
+}
+#btn:hover {
+ cursor: pointer;
+}
+.score {
+    text-align: center;
+}
+#result {
+    padding: 10px;
+}
