@@ -1,31 +1,45 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family: sans-serif;
-    background-color: #E7E9EB;
+  font-family: sans-serif;
+  background-color: #e7e9eb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
 }
 .computer-hand {
-    text-align: center;
-
+  text-align: center;
+}
+.computer-hand img {
+  width: 35vmin;
 }
 .choices {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .choice {
-    text-align: center;
+  text-align: center;
+}
+#btn {
+  border: none;
 }
 #btn:hover {
- cursor: pointer;
+  cursor: pointer;
+}
+#btn img {
+  width: 27vmin;
 }
 .score {
-    text-align: center;
+  text-align: center;
 }
 #result {
-    padding: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
 }
