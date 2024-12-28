@@ -107,7 +107,7 @@ function updateScore () {
         computer = 0 ;
     }
     if (computer === 5) {
-        resultPane.textContent = "Fucking loser";
+        resultPane.textContent = "Haha Loser!!";
         player = 0 ;
         computer = 0 ;
     }
